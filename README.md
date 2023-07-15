@@ -1,6 +1,6 @@
 # todo_app
 
-A new Flutter project.
+A Flutter project that keeps track of your task and it will be updated soon with some extraordinary features.
 
 ## Getting Started
 
