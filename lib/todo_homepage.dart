@@ -35,10 +35,11 @@ class _ToDoHomePageState extends State<ToDoHomePage> {
     setState(() => _ToDoTask.add(task));
   }
 
-  void onRemoveTask(ToDoData task){
+  void _onRemoveTask(ToDoData task){
     setState(() {
       _ToDoTask.remove(task);
     });
+
   }
   @override
   Widget build(BuildContext context) {
@@ -71,10 +72,10 @@ class _ToDoHomePageState extends State<ToDoHomePage> {
           ),
           Expanded(
             child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(40)),
-                child: ToDoList(task: _ToDoTask,)),
+                child: ToDoList(tasks: _ToDoTask, OnRemovetask: _onRemoveTask)),
           )
         ]),
         floatingActionButton: FloatingActionButton(
